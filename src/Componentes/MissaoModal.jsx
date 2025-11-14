@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+
 import sucesso from "../assets/miranha_go/wiinnnn.png";
 import erro from "../assets/miranha_go/erroooou.png";
 

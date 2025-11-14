@@ -15,57 +15,34 @@ export function Inventario() {
   };
 
   return (
-    <main
-      className="conteiner"
-      role="main"
-      aria-label="Página de inventário de figurinhas"
-    >
-      <section
-        className="inventario"
-        aria-labelledby="titulo-inventario"
+    <main className="inventario">
+      <h2>Inventário</h2>
+      <button 
+        className="limpar-inventario" 
+        onClick={limparInventario}
+        aria-disabled={figurinhas.length === 0}
       >
-        <h2 id="titulo-inventario">Inventário</h2>
+        Limpar Inventário
+      </button>
 
-        <button
-          className="limpar-inventario"
-          onClick={limparInventario}
-          aria-label="Limpar todo o inventário de figurinhas"
-        >
-          Limpar Inventário
-        </button>
-
-        {figurinhas.length === 0 ? (
-          <p
-            className="vazio"
-            role="status"
-            aria-live="polite"
-          >
-            Nenhuma figurinha coletada ainda!
-          </p>
-        ) : (
-          <div
-            className="grid"
-            role="list"
-            aria-label="Lista de figurinhas coletadas"
-          >
-            {figurinhas.map((f) => (
-              <div
-                key={f.id}
-                className="figurinha"
-                role="listitem"
-                tabIndex="0"
-                aria-label={`Figurinha de ${f.nome}`}
-              >
-                <img
-                  src={f.imagem}
-                  alt={`Figurinha de ${f.nome}`}
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        )}
-      </section>
+      {figurinhas.length === 0 ? (
+        <p className="vazio">Nenhuma figurinha coletada ainda!</p>
+      ) : (
+        <section className="grid" aria-label="Lista de figurinhas coletadas">
+          {figurinhas.map((f) => (
+            <article 
+              key={f.id} 
+              className="figurinha" 
+              aria-labelledby={`figurinha-${f.id}`}
+            >
+              <figure>
+                <img src={f.imagem} alt={f.nome} />
+                <figcaption id={`figurinha-${f.id}`}></figcaption>
+              </figure>
+            </article>
+          ))}
+        </section>
+      )}
     </main>
   );
 }

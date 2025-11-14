@@ -73,5 +73,29 @@ export const missoes = [
     descricao: "A minha única regra é não ter no codigo",
     respostaCorreta: "ARIA",
     status: 'disponivel'
+  },
+  {
+    id: 10,
+    titulo: "Conhecimentos Gerais",
+    missao: "O que eu sou?",   
+    descricao: "Eu ligo uma tabela na outra, quem eu sou?",
+    respostaCorreta: "chave estrangeira",
+    status: 'disponivel'
+  },
+  {
+    id: 11,
+    titulo: "Conhecimentos Gerais",
+    missao: "O que eu sou?",   
+    descricao: "ultimo comando para subir algum arquivo pro github",
+    respostaCorreta: "git push",
+    status: 'disponivel'
+  },
+  {
+    id: 12,
+    titulo: "Conhecimentos Gerais",
+    missao: "O que eu sou?",   
+    descricao: "Eu sou o fofoqueiro do react",
+    respostaCorreta: "props",
+    status: 'disponivel'
   }
 ];
