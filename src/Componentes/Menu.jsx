@@ -50,14 +50,14 @@ export function Menu() {
 
         <li>
           <Link
-            to="geolocalizacao"
+            to="mapa"
             aria-label="Abrir mapa de geolocalização"
             className="menu-item"
           >
             <figure>
               <img
                 src={mapa}
-                alt="Ícone de geolocalização"
+                alt="Ícone de mapa"
                 role="img"
                 aria-hidden="true"
               />

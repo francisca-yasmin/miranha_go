@@ -8,7 +8,7 @@ const URLS_TO_CACHE = [
 
 //instala e adiciona arquivos ao cache
 self.addEventListener('install', (event) => {
-    console.log('[SW] Instalando Service Workrer e ccheando arquivos');
+    console.log('[SW] Instalando Service Workrer e cacheando arquivos');
     event.waitUntil(
         caches.open(CACHE_NAME)
         .then((cache) => cache.addAll(URLS_TO_CACHE))
