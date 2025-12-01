@@ -1,0 +1,16 @@
+{
+  "short_name": "MiranhaGo",
+  "name": "Aplicativo MiranhaGo",
+  "start_url": "/",
+  "background_color": "#ffc7ea",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#ff4fd8",
+  "icons": [
+    {
+      "src": "/icone.png",
+      "sizes": "60x120",
+      "type": "image/png"
+    }
+  ]
+}
